@@ -1,4 +1,4 @@
-# External Workspace Manager Plugin @ GSoC 2016
+= External Workspace Manager Plugin @ GSoC 2016
 
 Organization: link:https://jenkins.io/[Jenkins Project]
 
@@ -6,39 +6,58 @@ Student: link:https://github.com/alexsomai[Alexandru Somai]
 
 Mentors: link:https://github.com/oleg-nenashev[Oleg Nenashev], link:https://github.com/martinda[Martin d'Anjou]
 
-## Main project - External Workspace Manager Plugin
+== Table of contents
+
+. <<main-project,Main project - External Workspace Manager Plugin>>
+. <<blog-posts,Blog posts @ jenkins.io>>
+. <<related-projects,Related projects>>
+.. <<run-selector-plugin,Run Selector Plugin>>
+.. <<workspace-cleanup-plugin,Workspace Cleanup Plugin>>
+
+== [[main-project]]Main project - External Workspace Manager Plugin
 
 The main project that I have worked on during link:https://summerofcode.withgoogle.com/[Google Summer of Code] 2016
 is called External Workspace Manager Plugin.
-The complete documentation may be found
+The complete documentation that I have written may be found
 link:https://github.com/jenkinsci/external-workspace-manager-plugin/blob/master/README.md[here].
 
-The source code is on link:https://github.com/jenkinsci/external-workspace-manager-plugin[GitHub].
-Following are the links to the list of commits I have made on this project, until August 23rd, 19:00 UTC:
+During the community bonding period I have created a plugin design document.
+The document was also updated on the go, as I was progressing with the code.
+It is publicly shared via Google Docs: https://docs.google.com/document/d/1yiisnsR7qg3XEEvch8vocWbitSUCZcoQ-pfzEVFg1eA/edit?usp=sharing
 
-- Page 1: https://github.com/jenkinsci/external-workspace-manager-plugin/commits/master?author=alexsomai&page=1&until=2016-08-23T19%3A00%3A00Z
-- Page 2: https://github.com/jenkinsci/external-workspace-manager-plugin/commits/master?author=alexsomai&page=2&until=2016-08-23T19%3A00%3A00Z
+I have tracked my progress using JIRA.
+The EPICs are:
 
-## Blog posts @ jenkins.io
+* Coding period phase 1: link:https://issues.jenkins-ci.org/browse/JENKINS-35019[JENKINS-35019]
+* Coding period phase 2: link:https://issues.jenkins-ci.org/browse/JENKINS-35971[JENKINS-35971]
+
+The plugin's source code is on link:https://github.com/jenkinsci/external-workspace-manager-plugin[GitHub].
+Following are the links to the list of **commits** I have made on this project:
+
+* Page 1: https://github.com/jenkinsci/external-workspace-manager-plugin/commits/master?author=alexsomai&page=1
+* Page 2: https://github.com/jenkinsci/external-workspace-manager-plugin/commits/master?author=alexsomai&page=2
+* Page 3: https://github.com/jenkinsci/external-workspace-manager-plugin/commits/master?author=alexsomai&page=3
+
+== [[blog-posts]]Blog posts @ jenkins.io
 
 During the GSoC I have also submitted several blog posts on the Jenkins blogging page:
 
-- The introductory blog post: https://jenkins.io/blog/2016/05/23/external-workspace-manager-plugin/
-- The blog post announcing the alpha release: https://jenkins.io/blog/2016/06/30/ewm-alpha-version/
+* The introductory blog post: https://jenkins.io/blog/2016/05/23/external-workspace-manager-plugin/
+* The blog post announcing the alpha release: https://jenkins.io/blog/2016/06/30/ewm-alpha-version/
 
 The blog posts were submitted via pull request: link:https://github.com/jenkins-infra/jenkins.io/pull/254[#254],
 link:https://github.com/jenkins-infra/jenkins.io/pull/296[#296].
-I have also made some other minor contributions to the
-link:https://github.com/jenkins-infra/jenkins.io[jenkins.io] repository, until August 23rd, 19:00 UTC:
+I have also made some other minor **contributions** to the
+link:https://github.com/jenkins-infra/jenkins.io[jenkins.io] repository:
 
-- https://github.com/jenkins-infra/jenkins.io/commits/master?author=alexsomai&until=2016-08-23T19%3A00%3A00Z
+* https://github.com/jenkins-infra/jenkins.io/commits/master?author=alexsomai
 
-## Related projects
+== [[related-projects]]Related projects
 
 My project is dependant, more or less, on other plugins.
 Therefore, I have contributed to other Jenkins plugins too.
 
-### Run Selector Plugin
+=== [[run-selector-plugin]]Run Selector Plugin
 
 In the External Workspace Manager Plugin I needed a feature to select a specific build based on some input parameters.
 Such feature was available in the link:https://github.com/jenkinsci/copyartifact-plugin[Copy Artifact Plugin].
@@ -49,21 +68,30 @@ https://groups.google.com/forum/#!topic/jenkinsci-dev/G-ZnJu3h67g.
 
 The work I did to decouple the build selection logic is in the
 link:https://github.com/jenkinsci/run-selector-plugin[Run Selector Plugin].
-The commits, filtered until August 23rd, 19:00 UTC:
+The **commits** are:
 
-- https://github.com/jenkinsci/run-selector-plugin/commits/master?author=alexsomai&until=2016-08-23T19%3A00%3A00Z
+* Page 1: https://github.com/jenkinsci/run-selector-plugin/commits/master?author=alexsomai&page=1
+* Page 2: https://github.com/jenkinsci/run-selector-plugin/commits/master?author=alexsomai&page=2
 
-### Workspace Cleanup Plugin
+// TODO - not released yet, but hopefully it will be
+// I have also released the Run Selector Plugin.
+// Minimum version 1.0 is needed to be used by the External Workspace Manager Plugin.
+
+=== [[workspace-cleanup-plugin]]Workspace Cleanup Plugin
 
 The External Workspace Manager Plugin needed a workspace cleanup feature, so that the user may automatically delete
 the workspace after it was used.
 The link:https://github.com/jenkinsci/ws-cleanup-plugin[Workspace Cleanup Plugin] does that,
 but it was not Pipeline compatible.
 Since my project is mainly focused on Pipeline jobs, I had to make the Workspace Cleanup Plugin to be
-Pipeline compatible. Also there was an issue related to that:
+Pipeline compatible.
+There was an existing issue related to that, too:
 link:https://issues.jenkins-ci.org/browse/JENKINS-28454[JENKINS-28454].
-I have submitted a Pipeline compatibility
-link:https://github.com/jenkinsci/ws-cleanup-plugin/pull/27[pull request], which was merged, and the afferent
-commits are:
+The Pipeline compatibility pull request
+link:https://github.com/jenkinsci/ws-cleanup-plugin/pull/27[#27] that I submitted was merged, and the afferent
+**commits** are:
 
-- https://github.com/jenkinsci/ws-cleanup-plugin/commits/master?author=alexsomai&until=2016-08-23T19%3A00%3A00Z
+* https://github.com/jenkinsci/ws-cleanup-plugin/commits/master?author=alexsomai
+
+The Workspace Cleanup Plugin was released with my changes.
+Since version 0.30 it is compatible with my project, External Workspace Manager Plugin.
