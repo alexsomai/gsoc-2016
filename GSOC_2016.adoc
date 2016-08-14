@@ -13,6 +13,7 @@ Mentors: link:https://github.com/oleg-nenashev[Oleg Nenashev], link:https://gith
 . <<related-projects,Related projects>>
 .. <<run-selector-plugin,Run Selector Plugin>>
 .. <<workspace-cleanup-plugin,Workspace Cleanup Plugin>>
+. <<acceptance-test-harness, Acceptance Test Harness>>
 
 == [[main-project]]Main project - External Workspace Manager Plugin
 
@@ -95,3 +96,14 @@ link:https://github.com/jenkinsci/ws-cleanup-plugin/pull/27[#27] that I submitte
 
 The Workspace Cleanup Plugin was released with my changes.
 Since version 0.30 it is compatible with my project, External Workspace Manager Plugin.
+
+== [[acceptance-test-harness]]Acceptance Test Harness
+
+I have written Acceptance Tests for the External Workspace Manager Plugin.
+These tests are located in a separate link:https://github.com/jenkinsci/acceptance-test-harness[repository],
+and are meant to test the integration with other plugins.
+For this, I have created the PR link:https://github.com/jenkinsci/acceptance-test-harness/pull/172[#172].
+// TODO - not merged yet
+//It was merged, and the commits are:
+
+//* https://github.com/jenkinsci/acceptance-test-harness/commits/master?author=alexsomai
