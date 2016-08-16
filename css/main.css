@@ -40,3 +40,16 @@ a {
     /*color: #e81c4f;*/
     color: #4078c0;
 }
+
+table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    padding: 6px 13px;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f8f8
+}
