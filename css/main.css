@@ -6,7 +6,7 @@ body {
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     line-height: 1.5;
     padding: 4em 1em;
-    color: #566b78;
+    color: #333;
 }
 
 h2 {
@@ -37,7 +37,6 @@ pre {
 }
 
 a {
-    /*color: #e81c4f;*/
     color: #4078c0;
 }
 
