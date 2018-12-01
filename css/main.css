@@ -52,3 +52,11 @@ table, td, th {
 tr:nth-child(even) {
     background-color: #f8f8f8
 }
+
+@media (min-width: 575px) {
+  .container {
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
